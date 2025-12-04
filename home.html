@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Hilton — Home</title>
+  <link rel="stylesheet" href="Tr1mystyle.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="hilton logo.png" alt="logo" class="logo-small"/>
+        <h1>HOTEL HILTON</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="home.html" class="active">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="food.html">Food</a>
+        <a href="booking.html">Booking</a>
+        <a href="management.html">Management</a>
+        <a href="about.html">About</a>
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero card-hero">
+      <div class="hero-content">
+        <h2>Experience Luxury</h2>
+        <p>Your comfort is our priority. Relax in elegant rooms, savor gourmet dining, and enjoy personalized service.</p>
+        <a href="booking.html" class="btn btn-gold">Book a Room</a>
+      </div>
+      <img src="hilton-hotels.webp" alt="hotel view" class="hero-image"/>
+    </section>
+
+    <section class="features">
+      <div class="feature card">
+        <h3>Premium Rooms</h3>
+        <p>Single, Double, Deluxe — designed for comfort and style.</p>
+      </div>
+      <div class="feature card">
+        <h3>Gourmet Dining</h3>
+        <p>Fresh local flavors and international favorites.</p>
+      </div>
+      <div class="feature card">
+        <h3>24/7 Service</h3>
+        <p>We are here for you round the clock.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yr"></span> Hotel Hilton — Crafted with warm hospitality</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr').innerText = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>

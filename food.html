@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Hilton — Food</title>
+  <link rel="stylesheet" href="Tr1mystyle.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="hilton logo.png" alt="logo" class="logo-small"/>
+        <h1>HOTEL HILTON</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="home.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="food.html" class="active">Food</a>
+        <a href="booking.html">Booking</a>
+        <a href="management.html">Management</a>
+        <a href="about.html">About</a>
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Food & Dining</h2>
+    <section class="menu-grid">
+      <article class="menu-card">
+        <img src="breakfast.jpg" alt="Breakfast">
+        <div class="card-body">
+          <h3>Breakfast</h3>
+          <p>Freshly made Indian & Continental breakfast.</p>
+          <div class="price">₹150 / person</div>
+          <a class="btn btn-gold" href="booking.html">Order with Booking</a>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="lunch.webp" alt="Lunch">
+        <div class="card-body">
+          <h3>Lunch</h3>
+          <p>Hearty meals with local flavors.</p>
+          <div class="price">₹300 / person</div>
+          <a class="btn btn-gold" href="booking.html">Order with Booking</a>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="dinner.jpg" alt="Dinner">
+        <div class="card-body">
+          <h3>Dinner</h3>
+          <p>Fine dining experience to end your day.</p>
+          <div class="price">₹250 / person</div>
+          <a class="btn btn-gold" href="booking.html">Order with Booking</a>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yr3"></span> Hotel Hilton</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr3').innerText = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>

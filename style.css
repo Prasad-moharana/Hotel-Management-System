@@ -1,0 +1,62 @@
+:root{
+  --navy:#0b2545;
+  --gold:#d4a017;
+  --muted:#7b8aa0;
+  --card:#0f365f;
+  --white:#ffffff;
+  --pcolor: #e8eef6; /* paragraph color visible on dark bg */
+}
+
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,"Poppins",sans-serif}
+
+body{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: linear-gradient(180deg, rgba(11,37,69,1) 0%, rgba(6,18,33,1) 100%);
+  color:var(--white);
+}
+
+/* auth card */
+.auth-page{width:100%;max-width:980px;padding:28px}
+.auth-card{
+  background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+  border-radius:14px;
+  padding:28px;
+  box-shadow: 0 10px 40px rgba(2,15,38,0.7);
+  display:flex;
+  gap:24px;
+  align-items:center;
+}
+.branding{flex:1;padding:20px}
+.logo{width:200px;height:200px;border-radius:10px;object-fit:cover}
+.branding h1{color:var(--gold);font-size:28px;margin-top:8px}
+.branding h1 span{color:var(--white)}
+.branding p{color:var(--muted);margin-top:6px}
+
+.forms{flex:1.2}
+.form-box{display:none;background:transparent}
+.form-box.active{display:block}
+.form-box h2{color:var(--white);margin-bottom:12px}
+input,select{width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:var(--pcolor);margin-bottom:12px}
+input::placeholder{color:rgba(255,255,255,0.5)}
+.btn{display:inline-block;padding:12px 18px;border-radius:10px;border:none;cursor:pointer;font-weight:600}
+.btn-primary{background:var(--navy);color:var(--white)}
+.btn-gold{background:var(--gold);color:#06203a}
+.muted{color:var(--muted);margin-top:8px}
+.muted a{color:var(--gold);text-decoration:none}
+
+.auth-footer{text-align:center;margin-top:14px;color:rgba(255,255,255,0.6);font-size:13px}
+
+/* paragraph visibility */
+p, li {
+  color: var(--pcolor);
+  line-height:1.6;
+}
+
+/* responsive */
+@media (max-width:900px){
+  .auth-card{flex-direction:column;padding:18px}
+  .branding{display:flex;align-items:center;gap:14px}
+}

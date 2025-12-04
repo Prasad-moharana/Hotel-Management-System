@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Hilton — Management</title>
+  <link rel="stylesheet" href="Tr1mystyle.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="hilton logo.png" alt="logo" class="logo-small"/>
+        <h1>HOTEL HILTON</h1>
+      </div>
+
+      <nav class="main-nav">
+        <a href="home.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="food.html">Food</a>
+        <a href="booking.html">Booking</a>
+        <a href="management.html" class="active">Management</a>
+        <a href="about.html">About</a>
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container">
+    <h2 class="page-title">Booking Management</h2>
+
+    <!-- BOOKINGS TABLE -->
+    <div class="table-wrap card">
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Room</th>
+            <th>Check-In</th>
+            <th>Check-Out</th>
+            <th>Food</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="bookingData">
+          <!-- JS will insert rows -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- OLD BILL SECTION -->
+    <div id="billSection" class="card bill-card" style="display:none;">
+      <h3>Generated Bill</h3>
+      <div id="billDetails"></div>
+
+      <div class="bill-actions">
+        <button id="paymentBtn" class="btn btn-gold" onclick="alert('Payment processed!')">
+          Mark Paid
+        </button>
+      </div>
+    </div>
+
+    <!-- ⭐ NEW BILL PAYMENT SECTION ADDED HERE ⭐ -->
+    <div class="payment-section card" id="paymentSection" style="display:none;">
+      <h2>Billing & Payment</h2>
+
+      <p>Total Amount: <span id="billAmount">₹0</span></p>
+
+      <label>Select Payment Method:</label>
+      <select id="paymentMethod">
+        <option value="">Choose one</option>
+        <option value="Net Banking">Net Banking</option>
+        <option value="PhonePe">PhonePe</option>
+        <option value="GPay">Google Pay</option>
+        <option value="Paytm">Paytm</option>
+        <option value="QR">QR Code</option>
+      </select>
+
+      
+
+      <button class="btn-pay" onclick="completePayment()">Pay Now</button>
+
+      <p id="paymentStatus" class="success-msg"></p>
+    </div>
+
+    <!-- CLEAR HISTORY -->
+    <div class="actions-row">
+      <button id="clearHistoryBtn" class="btn btn-danger" onclick="clearAllHistory()">
+        Clear All History
+      </button>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yr5"></span> Hotel Hilton</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('yr5').innerText = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+
+</body>
+</html>

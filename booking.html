@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Hotel Hilton — Booking</title>
+  <link rel="stylesheet" href="Tr1mystyle.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <div class="brand">
+        <img src="hilton logo.png" alt="logo" class="logo-small"/>
+        <h1>HOTEL HILTON</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="home.html">Home</a>
+        <a href="rooms.html">Rooms</a>
+        <a href="food.html">Food</a>
+        <a href="booking.html" class="active">Booking</a>
+        <a href="management.html">Management</a>
+        <a href="about.html">About</a>
+        <button class="logout-btn" onclick="logoutUser()">Logout</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Book a Room</h2>
+
+    <form id="bookingForm" class="booking-form card">
+      <div class="form-row">
+        <label for="name">Full name</label>
+        <input id="name" type="text" required>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="email">Email</label>
+          <input id="email" type="email" required>
+        </div>
+        <div>
+          <label for="phone">Phone</label>
+          <input id="phone" type="tel" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label for="roomType">Room Type</label>
+        <select id="roomType" required>
+          <option value="">Select Room Type</option>
+          <option value="Single">Single - ₹2,000/night</option>
+          <option value="Double">Double - ₹3,000/night</option>
+          <option value="Deluxe">Deluxe - ₹5,000/night</option>
+        </select>
+      </div>
+
+      <div class="form-row two-col">
+        <div>
+          <label for="checkIn">Check-In</label>
+          <input id="checkIn" type="date" required>
+        </div>
+        <div>
+          <label for="checkOut">Check-Out</label>
+          <input id="checkOut" type="date" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <label>Food Services (choose any)</label>
+        <div class="food-options">
+          <label><input type="checkbox" name="food" value="breakfast"> Breakfast (₹150)</label>
+          <label><input type="checkbox" name="food" value="lunch"> Lunch (₹300)</label>
+          <label><input type="checkbox" name="food" value="dinner"> Dinner (₹250)</label>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <button type="submit" class="btn btn-gold">Confirm Booking</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="yr4"></span> Hotel Hilton</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('yr4').innerText = new Date().getFullYear();</script>
+  <script src="script.js"></script>
+</body>
+</html>
